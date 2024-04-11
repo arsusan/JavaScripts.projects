@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age_verification.</title>
+</head>
+
+<body>
+    <div class="ageVerification"
+        style="background-color: #689aca; text-align: center; width: 200px; height: auto; margin: 25px; padding: 20px;">
+        <h4>Age Checker.</h4>
+        <label for="age" id="age">Enter your age: </label>
+        <input type="number" id="myage" style="width: 50px;"><br><br>
+        <button id="ageButton" style="margin: 5px; padding: 5px; background-color: #718292;">Submit
+            Information.</button>
+
+        <h4 id="display_age"></h4>
+
+    </div>
+
+    <script>
+        function ageCheacker(age) {
+            (age > 18) ? document.getElementById("display_age").textContent = `You are not a minor.` : document.getElementById("display_age").textContent = `You are a minor.`;
+
+        }
+        let age;
+        document.getElementById("ageButton").onclick = function () {
+            age = document.getElementById("myage").value;
+            age = Number(age);
+            ageCheacker(age);
+
+
+        }
+    </script>
+</body>
+
+</html>
